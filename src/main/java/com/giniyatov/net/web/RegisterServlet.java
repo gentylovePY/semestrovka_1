@@ -1,7 +1,7 @@
-package net.login.web;
+package com.giniyatov.net.web;
 
-import net.login.Member;
-import net.login.database.RegisterDao;
+import com.giniyatov.net.dao.impl.UserDaoImpl;
+import com.giniyatov.net.model.Member;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
 
         Member member = new Member(username,password,email,phone);
 
-        RegisterDao registerDao = new RegisterDao();
+        UserDaoImpl registerDao = new UserDaoImpl();
         String result = registerDao.insert(member);
         response.getWriter().print(result);
     }

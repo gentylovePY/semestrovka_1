@@ -1,4 +1,4 @@
-package net.login;
+package com.giniyatov.net.model;
 
 public class Member {
     private String username, password, email, phone;

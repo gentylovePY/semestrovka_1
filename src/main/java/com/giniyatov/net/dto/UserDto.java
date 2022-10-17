@@ -1,6 +1,6 @@
-package net.login.bean;
+package com.giniyatov.net.dto;
 
-public class LoginBean {
+public class UserDto {
 
     private String username;
     private String password;

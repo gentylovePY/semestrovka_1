@@ -1,7 +1,8 @@
-package net.login.web;
+package com.giniyatov.net.web;
 
-import net.login.bean.LoginBean;
-import net.login.database.LoginDao;
+
+import com.giniyatov.net.dao.impl.UserDaoImpl;
+import com.giniyatov.net.dto.UserDto;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -21,13 +22,13 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        LoginBean loginBean = new LoginBean();
-        loginBean.setUsername(username);
-        loginBean.setPassword(password);
+        UserDto userDto = new UserDto();
+        userDto.setUsername(username);
+        userDto.setPassword(password);
 
-        LoginDao loginDao = new LoginDao();
+        UserDaoImpl loginDao = new UserDaoImpl();
         try {
-            if (loginDao.validate(loginBean)){
+            if (loginDao.validate(userDto)){
                 response.sendRedirect("loginSuccess.jsp");
 
             }else {
