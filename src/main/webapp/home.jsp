@@ -27,8 +27,8 @@
       <li><a href="#">Thames</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">FAQ</a></li>
-      <li style="float: right;"><a href="login.jsp">Login</a></li>
-      <li style="float: right;"><a href="registration.jsp">Registration</a></li>
+      <li style="float: right;"><a href="/login">Login</a></li>
+      <li style="float: right;"><a href="/register">Registration</a></li>
 
     </ul>
   </nav>

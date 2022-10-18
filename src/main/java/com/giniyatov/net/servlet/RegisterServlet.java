@@ -12,7 +12,7 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("registration.jsp");
+        response.sendRedirect("registration.ftl");
     }
 
     @Override
@@ -26,6 +26,9 @@ public class RegisterServlet extends HttpServlet {
 
         UserDaoImpl registerDao = new UserDaoImpl();
         String result = registerDao.insert(member);
-        response.getWriter().print(result);
+        if (result == "successfully"){
+            response.sendRedirect("login.ftl");
+        }
+
     }
 }
