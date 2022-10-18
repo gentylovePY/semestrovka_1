@@ -17,7 +17,9 @@
         <table>
             <tr><td>User Name: </td> <td><input type="text" name="username"></td></tr>
             <tr><td>Password: </td> <td><input type="password" name="password"></td></tr>
+            <tr><td>&nbsp; </td> <td><input type="checkbox" name="remember">Remember me?</td></tr>
             <tr><td></td> <td><input type="submit" value="Login"></td></tr>
+
         </table>
     </form>
 

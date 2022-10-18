@@ -1,4 +1,4 @@
-package com.giniyatov.net.web;
+package com.giniyatov.net.servlet;
 
 import com.giniyatov.net.dao.impl.UserDaoImpl;
 import com.giniyatov.net.model.Member;

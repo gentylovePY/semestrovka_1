@@ -1,4 +1,4 @@
-package com.giniyatov.net.web;
+package com.giniyatov.net.servlet;
 
 
 import com.giniyatov.net.dao.impl.UserDaoImpl;
@@ -21,6 +21,9 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        boolean remember = request.getParameter("remember") != null;
+        System.out.println(remember+" = rem");
+
 
         UserDto userDto = new UserDto();
         userDto.setUsername(username);
@@ -29,7 +32,19 @@ public class LoginServlet extends HttpServlet {
         UserDaoImpl loginDao = new UserDaoImpl();
         try {
             if (loginDao.validate(userDto)){
-                response.sendRedirect("loginSuccess.jsp");
+                HttpSession httpSession = request.getSession();
+                httpSession.setAttribute("username",username);
+
+
+                if (remember) {
+
+                    Cookie httpCookie = new Cookie("username", username);
+                    httpCookie.setMaxAge(24 * 60 * 60);
+                    response.addCookie(httpCookie);
+
+
+                }
+                response.sendRedirect("home.jsp");
 
             }else {
                 response.sendRedirect("login.jsp");
