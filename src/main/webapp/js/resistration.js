@@ -6,8 +6,6 @@ $(document).ready(function () {
         validateUsername();
     });
 
-
-
 });
 
     function validateUsername() {
@@ -104,14 +102,9 @@ $("#submitbtn").click(function () {
     validateUsername();
     validatePassword();
     validateConfirmPassword();
-    if (
-        usernameError == true &&
-        passwordError == true &&
-        confirmPasswordError == true &&
-        phoneError == true
-
-    ) {
+    if (usernameError == true && passwordError == true && confirmPasswordError == true && phoneError == true) {
         return true;
+
     } else {
         return false;
     }
