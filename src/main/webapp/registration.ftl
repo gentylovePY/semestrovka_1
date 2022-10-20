@@ -9,15 +9,32 @@
     <link rel="stylesheet" type="text/css" href="css/registrationAndLogin.css">
     <script>
         $(document).ready(function () {
-
             $("#username").keyup(function () {
-                $.get("ajax", function (response) {
-                    $("#ajax-div").text(response);
-                })
+               var user =  $("#username").val()
+                console.log(user)
+                $.ajax({
+                    type: 'GET',
+                    url: "register",
+                    data: $("form").serialize(),
+                    success: function (result) {
+
+                        $("#ajax-div").text(result);
+                        console.log(typeof result)
+
+                        if (result.trim() == 'true') {
+                            console.log(result,1)
+                            document.getElementById("submitbtn").setAttribute("disabled", "disabled");
+                        }else{
+                            console.log(result,2)
+                            document.getElementById("submitbtn").removeAttribute("disabled");
+                        }
+                    },
+                    error: function (result) {
+                        console.log(result);
+                    }
+                });
             });
-
         });
-
     </script>
 </head>
 
@@ -30,7 +47,7 @@
 
 <body>
 
-<form action="register" method="post">
+<form action="register"  method="post">
 <div class="col-md-4 col-md-offset-4" id="login">
     <section id="inner-wrapper" class="login">
         <article>
@@ -38,15 +55,17 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+
                         <input type="text" class="form-control" name="username" id="username" placeholder="Name">
 
                     </div>
-                    <div id="ajax-div">
-                    </div>
+                    <h5 id="ajax-div">
+                    </h5>
                     <h5 id="usercheck" style="color: red;">
                         **Username is missing
                     </h5>
                 </div>
+
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
@@ -82,13 +101,14 @@
                         **Password didn't match
                     </h5>
                 </div>
-                <button type="submit" id="submitbtn" value="register" class="btn btn-success btn-block">Register</button>
+                <button type="submit" id="submitbtn" value="registers" class="btn btn-success btn-block">Register</button>
             </form>
+
         </article>
     </section></div>
 </form>
 
-<!-- Including resistration.js jQuery Script -->
+
 <script src="js/resistration.js"></script>
 </body>
 

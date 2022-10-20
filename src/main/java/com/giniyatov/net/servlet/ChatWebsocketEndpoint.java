@@ -3,6 +3,11 @@ package com.giniyatov.net.servlet;
 import com.giniyatov.net.filter.MessageModelDecoder;
 import com.giniyatov.net.filter.MessageModelEncoder;
 import com.giniyatov.net.model.MessageModel;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -14,8 +19,10 @@ import java.util.logging.Logger;
 
 
 @ServerEndpoint(value = "/chat", decoders = MessageModelDecoder.class, encoders = MessageModelEncoder.class)
-public class ChatWebsocketEndpoint {
-    
+public class ChatWebsocketEndpoint  {
+
+
+
     private static Set<Session> sessions = Collections.synchronizedSet(new HashSet<Session>());
     
 
