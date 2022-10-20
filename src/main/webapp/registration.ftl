@@ -5,7 +5,20 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/registrationAndLogin.css">
+    <script>
+        $(document).ready(function () {
+
+            $("#username").keyup(function () {
+                $.get("ajax", function (response) {
+                    $("#ajax-div").text(response);
+                })
+            });
+
+        });
+
+    </script>
 </head>
 
 <head>
@@ -27,6 +40,8 @@
                         <span class="input-group-addon"><i class="fa fa-user"> </i></span>
                         <input type="text" class="form-control" name="username" id="username" placeholder="Name">
 
+                    </div>
+                    <div id="ajax-div">
                     </div>
                     <h5 id="usercheck" style="color: red;">
                         **Username is missing
