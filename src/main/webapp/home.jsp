@@ -28,7 +28,7 @@
       <li><a href="#">About</a></li>
       <li><a href="#">FAQ</a></li>
       <li style="float: right;"><a href="/login">Login</a></li>
-      <li style="float: right;"><a href="/register">Registration</a></li>
+      <li style="float: right;"><a href="/registration.ftl">Registration</a></li>
 
     </ul>
   </nav>
@@ -47,7 +47,7 @@
       <li><a href="#">About</a></li>
       <li><a href="#">FAQ</a></li>
       <li style="float: right;"><a href="logout">Log out</a></li>
-      <h5 style="float: right; color: white; font-size: 20px">Welcome, <%=name%></h5>
+      <a href="profile" style="float: right; color: white; font-size: 20px">Welcome, <%=name%></a>
 
     </ul>
   </nav>

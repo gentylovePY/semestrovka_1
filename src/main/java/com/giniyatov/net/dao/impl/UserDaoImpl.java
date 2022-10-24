@@ -52,7 +52,7 @@ public class UserDaoImpl implements Dao {
         preparedStatement.setString(2, userDto.getPassword());
         ResultSet resultSet = preparedStatement.executeQuery();
         status = resultSet.next();
-        System.out.println(userDto.getUsername());
+
 
 
         return status;

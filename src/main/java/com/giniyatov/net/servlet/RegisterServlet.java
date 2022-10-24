@@ -47,7 +47,7 @@ public class RegisterServlet extends HttpServlet {
 
 
 
-        if (result == "successfully"){
+        if (result.equals("successfully")){
             response.sendRedirect("/login");
         }
 

@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                             <!-- Save changes button-->
-                            <button class="btn btn-primary" type="button">Save changes</button>
+                            <button class="btn btn-primary" type="submit">Save changes</button>
                         </form>
                     </div>
                 </div>
