@@ -84,6 +84,9 @@
                                         <select name="city" class="form-control" id="inputOrgName">
                                             <%
                                                 String city = (String) request.getAttribute("city");
+
+                                                System.out.println(city);
+
                                                 if (Objects.equals(city, "")){
                                             %>
 

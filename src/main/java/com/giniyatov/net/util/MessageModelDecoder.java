@@ -1,4 +1,4 @@
-package com.giniyatov.net.filter;
+package com.giniyatov.net.util;
 
 import com.giniyatov.net.model.MessageModel;
 import com.google.gson.Gson;
