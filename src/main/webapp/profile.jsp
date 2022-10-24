@@ -7,11 +7,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/profile.css">
+
 </head>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <%@ page contentType=
+                     "text/html; charset=UTF-8"
+    %>
 
 
 </head>
@@ -54,28 +57,29 @@
                             <!-- Form Group (username)-->
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
-                                <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username">
+                                <input class="form-control" name="username" id="inputUsername" type="text" placeholder="Enter your username" value="${name}" readonly>
                             </div>
                             <!-- Form Row-->
                             <div class="row gx-3 mb-3">
                                 <!-- Form Group (first name)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputFirstName">First name</label>
-                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie">
+                                    <input class="form-control" id="inputFirstName" name="fName" type="text" placeholder="Enter your first name" value="${fname}">
                                 </div>
                                 <!-- Form Group (last name)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputLastName">Last name</label>
-                                    <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna">
+                                    <input class="form-control" id="inputLastName" name="lName" type="text" placeholder="Enter your last name" value="${lname}" >
                                 </div>
                             </div>
                             <!-- Form Row        -->
                             <div class="row gx-3 mb-3">
                                 <!-- Form Group (organization name)-->
                                 <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName">Organization name</label>
+                                <label class="small mb-1" for="inputOrgName">City</label>
 
                                         <select name="city" class="form-control" id="inputOrgName">
+
                                             <option value="" class="form-control">-- Выберите город --</option>
                                             <option value="petersburg" class="form-control">Санкт-Петербург</option>
                                             <option value="samara" class="form-control" >Самара</option>
@@ -87,15 +91,15 @@
 
                                 <!-- Form Group (location)-->
                                 <div class="col-md-6">
-                                    <label class="small mb-1" for="inputLocation">Gender</label>
+                                    <label class="small mb-1" >Gender</label>
                                     <br>
                                     <form>
 
                                         <input type="checkbox" name="field1">
-                                        <label for="female">Boy</label>
+                                        <label >Boy</label>
 
                                         <input type="checkbox" name="field2">
-                                        <label for="female">Girl</label>
+                                        <label >Girl</label>
 
                                     </form>
 
@@ -104,19 +108,19 @@
                             <!-- Form Group (email address)-->
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com">
+                                <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Enter your email address" value="${email}">
                             </div>
                             <!-- Form Row-->
                             <div class="row gx-3 mb-3">
                                 <!-- Form Group (phone number)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputPhone">Phone number</label>
-                                    <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
+                                    <input class="form-control" name="phone" id="inputPhone" type="tel" placeholder="Enter your phone number" value="${phone}">
                                 </div>
                                 <!-- Form Group (birthday)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                    <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988">
+                                    <input class="form-control" dirname="birthday" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" >
                                 </div>
                             </div>
                             <!-- Save changes button-->

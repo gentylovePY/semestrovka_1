@@ -22,7 +22,6 @@ public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        // response.sendRedirect("registration.ftl");
         String username = request.getParameter("username");
-        System.out.println(username);
         PrintWriter out = response.getWriter();
         AjaxImpl ajax = new AjaxImpl();
         try {
