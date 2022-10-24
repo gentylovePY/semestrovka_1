@@ -1,3 +1,4 @@
+<%@ page import="java.util.Objects" %>
 <!DOCTYPE html>
 <html lang="EN">
 
@@ -8,12 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/profile.css">
 
+
 </head>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%@ page contentType=
-                     "text/html; charset=UTF-8"
+    <%@ page contentType="text/html; charset=UTF-8"
     %>
 
 
@@ -78,13 +79,29 @@
                                 <div class="col-md-6">
                                 <label class="small mb-1" for="inputOrgName">City</label>
 
+
+
                                         <select name="city" class="form-control" id="inputOrgName">
+                                            <%
+                                                String city = (String) request.getAttribute("city");
+                                                if (Objects.equals(city, "")){
+                                            %>
 
                                             <option value="" class="form-control">-- Выберите город --</option>
-                                            <option value="petersburg" class="form-control">Санкт-Петербург</option>
-                                            <option value="samara" class="form-control" >Самара</option>
-                                            <option value="perm" class="form-control" >Пермь</option>
-                                            <option value="novosibirsk" class="form-control" >Новосибирск</option>
+                                            <option value="petersburg" class="form-control">petersburg</option>
+                                            <option value="samara" class="form-control" >samara</option>
+                                            <option value="perm" class="form-control" >perm</option>
+                                            <option value="novosibirsk" class="form-control" >novosibirsk</option>
+
+                                            <%
+                                                }else {
+                                            %>
+                                            <option value="" class="form-control">${city}</option>
+                                            <option value="petersburg" class="form-control">petersburg</option>
+                                            <option value="samara" class="form-control" >samara</option>
+                                            <option value="perm" class="form-control" >perm</option>
+                                            <option value="novosibirsk" class="form-control" >novosibirsk</option>
+                                            <%}%>
                                         </select>
 
                                 </div>
@@ -94,12 +111,23 @@
                                     <label class="small mb-1" >Gender</label>
                                     <br>
                                     <form>
+                                        <%
+                                            String ch = (String) request.getAttribute("gender");
+                                            if (Objects.equals(ch, "t")){
+                                        %>
 
-                                        <input type="checkbox" name="field1">
+                                        <input type="checkbox" id="myCheckBox" checked="yes" name="field1">
                                         <label >Boy</label>
 
                                         <input type="checkbox" name="field2">
                                         <label >Girl</label>
+                                        <%}else {%>
+                                        <input type="checkbox" id="myCheckBox"  name="field1">
+                                        <label >Boy</label>
+
+                                        <input type="checkbox" checked="yes" name="field2">
+                                        <label >Girl</label>
+                                        <%}%>
 
                                     </form>
 
@@ -120,7 +148,7 @@
                                 <!-- Form Group (birthday)-->
                                 <div class="col-md-6">
                                     <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                    <input class="form-control" dirname="birthday" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" >
+                                    <input class="form-control" dirname="birthday" id="inputBirthday" type="text" name="birthday" value="${btrh}" placeholder="Enter your birthday" >
                                 </div>
                             </div>
                             <!-- Save changes button-->
