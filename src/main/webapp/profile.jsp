@@ -26,14 +26,21 @@
 
 <form action="profile" method="post">
     <div class="container-xl px-4 mt-4">
-        <!-- Account page navigation-->
-        <nav class="nav nav-borders">
-            <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank">Profile</a>
-            <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-billing-page" target="__blank">Billing</a>
-            <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-security-page" target="__blank">Security</a>
-            <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"  target="__blank">Notifications</a>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+            <div class="container-fluid"><a class="navbar-brand" href="home.jsp">Transport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                     id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <hr class="mt-0 mb-4">
+        <!-- Account page navigation-->
+
         <div class="row">
             <div class="col-xl-4">
                 <!-- Profile picture card-->
@@ -44,8 +51,7 @@
                         <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
                         <!-- Profile picture help block-->
                         <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
-                        <!-- Profile picture upload button-->
-                        <button class="btn btn-primary" type="button">Upload new image</button>
+
                     </div>
                 </div>
             </div>
