@@ -7,35 +7,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/registrationAndLogin.css">
-    <script>
-        $(document).ready(function () {
-            $("#username").keyup(function () {
-               var user =  $("#username").val()
-                console.log(user)
-                $.ajax({
-                    type: 'GET',
-                    url: "register",
-                    data: $("form").serialize(),
-                    success: function (result) {
-
-                        $("#ajax-div").text(result);
-                        console.log(typeof result)
-
-                        if (result.trim() == 'true') {
-                            console.log(result,1)
-                            document.getElementById("submitbtn").setAttribute("disabled", "disabled");
-                        }else{
-                            console.log(result,2)
-                            document.getElementById("submitbtn").removeAttribute("disabled");
-                        }
-                    },
-                    error: function (result) {
-                        console.log(result);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/ajaxRegistation.js"></script>
 </head>
 
 <head>
@@ -101,7 +73,7 @@
                         **Password didn't match
                     </h5>
                 </div>
-                <button type="submit" id="submitbtn" value="registers" class="btn btn-success btn-block">Register</button>
+                <button type="submit" id="submitbtn" value="registers" class="btn">Register</button>
             </form>
 
         </article>

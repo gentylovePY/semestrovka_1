@@ -3,7 +3,6 @@ package com.giniyatov.net.util;
 import com.giniyatov.net.model.MessageModel;
 import com.google.gson.Gson;
 
-
 import javax.websocket.DecodeException;
 import javax.websocket.Decoder;
 import javax.websocket.EndpointConfig;

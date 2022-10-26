@@ -16,7 +16,7 @@ $(document).ready(function () {
             return false;
         } else if (usernameValue.length < 3 || usernameValue.length > 20) {
             $("#usercheck").show();
-            $("#usercheck").html("**length of username must be between 3 and 20");
+            $("#usercheck").html("**error");
             usernameError = false;
             return false;
         } else {
@@ -66,7 +66,7 @@ phone.addEventListener("blur", () => {
         if (passwordValue.length < 3 || passwordValue.length > 10) {
             $("#passcheck").show();
             $("#passcheck").html(
-                "**length of your password must be between 3 and 10"
+                "**error"
             );
             $("#passcheck").css("color", "red");
             passwordError = false;
@@ -87,7 +87,7 @@ phone.addEventListener("blur", () => {
         let passwordValue = $("#password").val();
         if (passwordValue != confirmPasswordValue) {
             $("#conpasscheck").show();
-            $("#conpasscheck").html("**Password didn't Match");
+            $("#conpasscheck").html("**error");
             $("#conpasscheck").css("color", "red");
             confirmPasswordError = false;
             return false;

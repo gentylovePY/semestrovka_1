@@ -49,7 +49,7 @@ body {
     color:#333;
 }
 .forgot a:hover {
-    color:#5cb85c;
+    color: #a9a9a9;
 }
 
 #inner-wrapper, #contact-us .contact-form, #contact-us .our-address {

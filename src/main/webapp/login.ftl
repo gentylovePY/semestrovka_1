@@ -11,9 +11,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 </style>
-
 <body>
 
 <form action="login" method="post">
@@ -27,19 +25,17 @@
                             <input type="text" class="form-control" name="username" placeholder="Name">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-key"> </i></span>
                             <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
-
                     </div>
                     <tr><td>&nbsp; </td> <td><input type="checkbox" name="remember"> Remember me?</td></tr>
                     <br>
                     <br>
 
-                    <button type="submit" id="submitbtn" value="Login" class="btn btn-success btn-block">Login</button>
+                    <button type="submit"  id="submitbtn" value="Login" class="btn">Login</button>
                 </form>
             </article>
         </section></div>

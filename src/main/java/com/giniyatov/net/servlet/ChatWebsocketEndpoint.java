@@ -1,8 +1,8 @@
 package com.giniyatov.net.servlet;
 
+import com.giniyatov.net.model.MessageModel;
 import com.giniyatov.net.util.MessageModelDecoder;
 import com.giniyatov.net.util.MessageModelEncoder;
-import com.giniyatov.net.model.MessageModel;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 
 @ServerEndpoint(value = "/chat", decoders = MessageModelDecoder.class, encoders = MessageModelEncoder.class)
-public class ChatWebsocketEndpoint  {
+public class ChatWebsocketEndpoint {
 
 
 

@@ -77,35 +77,35 @@
                             <div class="row gx-3 mb-3">
                                 <!-- Form Group (organization name)-->
                                 <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName">City</label>
+                                    <label class="small mb-1" for="inputOrgName">City</label>
 
 
 
-                                        <select name="city" class="form-control" id="inputOrgName">
-                                            <%
-                                                String city = (String) request.getAttribute("city");
+                                    <select name="city" class="form-control" id="inputOrgName">
+                                        <%
+                                            String city = (String) request.getAttribute("city");
 
-                                                System.out.println(city);
+                                            System.out.println(city);
 
-                                                if (Objects.equals(city, "")){
-                                            %>
+                                            if (Objects.equals(city, "")){
+                                        %>
 
-                                            <option value="" class="form-control">-- Выберите город --</option>
-                                            <option value="petersburg" class="form-control">petersburg</option>
-                                            <option value="samara" class="form-control" >samara</option>
-                                            <option value="perm" class="form-control" >perm</option>
-                                            <option value="novosibirsk" class="form-control" >novosibirsk</option>
+                                        <option value="" class="form-control">-- Выберите город --</option>
+                                        <option value="petersburg" class="form-control">petersburg</option>
+                                        <option value="samara" class="form-control" >samara</option>
+                                        <option value="perm" class="form-control" >perm</option>
+                                        <option value="novosibirsk" class="form-control" >novosibirsk</option>
 
-                                            <%
-                                                }else {
-                                            %>
-                                            <option value="" class="form-control">${city}</option>
-                                            <option value="petersburg" class="form-control">petersburg</option>
-                                            <option value="samara" class="form-control" >samara</option>
-                                            <option value="perm" class="form-control" >perm</option>
-                                            <option value="novosibirsk" class="form-control" >novosibirsk</option>
-                                            <%}%>
-                                        </select>
+                                        <%
+                                        }else {
+                                        %>
+                                        <option value="" class="form-control">${city}</option>
+                                        <option value="petersburg" class="form-control">petersburg</option>
+                                        <option value="samara" class="form-control" >samara</option>
+                                        <option value="perm" class="form-control" >perm</option>
+                                        <option value="novosibirsk" class="form-control" >novosibirsk</option>
+                                        <%}%>
+                                    </select>
 
                                 </div>
 
