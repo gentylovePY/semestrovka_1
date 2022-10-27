@@ -14,6 +14,8 @@ public class PostgresConnectionUtil {
     private static final String USER = "postgres";
     private static final String PASSWORD = "postgres";
 
+    private static final Logger logger = LoggerFactory.getLogger(PostgresConnectionUtil.class);
+
     public static void loadDriver(String DRIVER){
         try {
             Class.forName(DRIVER);
@@ -25,6 +27,7 @@ public class PostgresConnectionUtil {
     public static Connection getConnection() throws SQLException {
         Connection connection = null;
         connection = DriverManager.getConnection(URL,USER,PASSWORD);
+        logger.info("username", logger);
         return connection;
     }
 }

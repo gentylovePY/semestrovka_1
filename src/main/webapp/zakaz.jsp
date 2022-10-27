@@ -31,7 +31,7 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/buyTicket.jsp">BuyTicket</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="/zakaz">Orders</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp">Schedule</a></li>
 
             </ul>
         </div>

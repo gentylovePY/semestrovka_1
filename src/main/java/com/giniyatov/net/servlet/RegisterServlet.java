@@ -5,6 +5,8 @@ import com.giniyatov.net.dao.impl.UserDaoImpl;
 import com.giniyatov.net.model.Member;
 import com.giniyatov.net.util.PostgresConnectionUtil;
 import org.checkerframework.checker.units.qual.A;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

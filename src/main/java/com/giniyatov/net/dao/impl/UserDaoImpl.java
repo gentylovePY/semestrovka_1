@@ -23,7 +23,10 @@ public class UserDaoImpl implements Dao {
         String sql2 = "insert into profile values(?,?,?,?,?,?)";
 
 
+
+
         try {
+
             Connection connection = getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);

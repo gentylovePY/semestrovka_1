@@ -32,7 +32,7 @@
              id="navcol-1">
           <ul class="nav navbar-nav">
             <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp">Schedule</a></li>
 
 
           </ul>
@@ -44,10 +44,9 @@
     <div class="container hero">
       <div class="row">
         <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
-          <h1>Business goal designs</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></p>
-          <button class="btn btn-light btn-lg action-button" type="button"><a href="login"> Learn More</a><i class="fa fa-long-arrow-right ml-2"></i></button>
-
+          <h1>Buy Ticket</h1>
+          <p>in order to buy a ticket, you need to register</p>
+          <button class="btn btn-light btn-lg action-button" type="submit"><a href="/registration.ftl">Register</a><i class="fa fa-long-arrow-right ml-2"></i></button>
         </div>
         <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
           <div class="iphone-mockup">
@@ -70,7 +69,7 @@
             <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
             <li class="nav-item" role="presentation"><a class="nav-link" href="/buyTicket.jsp">BuyTicket</a></li>
             <li class="nav-item" role="presentation"><a class="nav-link" href="/zakaz">Orders</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp">Schedule</a></li>
 
           </ul>
           <form class="form-inline mr-auto" target="_self">
@@ -85,9 +84,9 @@
     <div class="container hero">
       <div class="row">
         <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
-          <h1>Business goal designs</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></p>
-          <button class="btn btn-light btn-lg action-button" type="submit"><a href="buyTicket.jsp"> Learn More</a><i class="fa fa-long-arrow-right ml-2"></i></button>
+          <h1>Buy Ticket</h1>
+          <p>In our service you can buy tickets at the lowest prices. You can also see which buses run and at what time in your direction. Before you buy tickets, you must register</p>
+          <button class="btn btn-light btn-lg action-button" type="submit"><a href="buyTicket.jsp"> Buy</a><i class="fa fa-long-arrow-right ml-2"></i></button>
         </div>
         <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
           <div class="iphone-mockup">
