@@ -33,7 +33,9 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/buyTicket.jsp">BuyTicket</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/zakaz">Orders</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
 
                     </ul>
                 </div>

@@ -21,9 +21,10 @@
         <section id="inner-wrapper" class="login">
             <article>
                 <form>
+                    <h3>Покупка билетов</h3>
                     <div class="form-group">
                         <div class="input-group">
-                            <h3>Автобус</h3>
+
                             <select name="bus" class="form-control" id="bus">
 
                                 <option value="" class="form-control">-- Выберите автобус --</option>
@@ -39,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <h3>Город отправления</h3>
+
                             <select name="startCity" class="form-control" id="startCity">
 
                                 <option value="" class="form-control">-- Выберите город отправления --</option>
@@ -56,7 +57,7 @@
 
                     <div class="form-group">
                         <div class="input-group">
-                            <h3>Город Назначения</h3>
+
                        <select name="endCity" class="form-control" id="endCity">
 
                                 <option value="" class="form-control">-- Выберите город назначения --</option>
@@ -73,13 +74,12 @@
 
                     <br>
 
-                    <button type="submit"  id="submitbtn" value="Login" class="btn">Login</button>
+                    <button type="submit"  id="submitbtn" value="Login" class="btn">Buy</button>
                 </form>
             </article>
         </section></div>
 </form>
 
-<!-- Including resistration.js jQuery Script -->
 <script src="js/resistration.js"></script>
 </body>
 

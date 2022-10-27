@@ -36,11 +36,11 @@ public class BuyTicketDaoImpl {
 
     }
 
-    public List<BuyTicket> validate() throws SQLException {
+    public List<BuyTicket> validate(String user) throws SQLException {
         List<BuyTicket> list = new ArrayList<>();
         loadDriver(DRIVER);
         Connection connection = PostgresConnectionUtil.getConnection();
-        String sql = "select * from buytic";
+        String sql = "select * from buytic where username ::  varchar='"+user+"'";
 
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);

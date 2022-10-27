@@ -19,6 +19,10 @@
   <script src="js/faq.js"></script>
 </head>
 <body>
+<%
+  String name = (String) session.getAttribute("username");
+  if (name == null){
+%>
 <div class="container">
   <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
     <div class="container-fluid"><a class="navbar-brand" href="home.jsp">Transport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -26,8 +30,8 @@
            id="navcol-1">
         <ul class="nav navbar-nav">
           <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
-          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
+
 
         </ul>
       </div>
@@ -59,5 +63,49 @@
     </ul>
   </div>
 </div>
+<%} else{%>
+
+<div class="container">
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+    <div class="container-fluid"><a class="navbar-brand" href="home.jsp">Transport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse"
+           id="navcol-1">
+        <ul class="nav navbar-nav">
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/buyTicket.jsp">BuyTicket</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/zakaz">Orders</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="faq">
+    <ul class="faq-questions">
+      <li>
+        <h4 class="faq-question">Как я могу вернуть деньги за уже оплаченный штраф?</h4>
+        <p class="faq-answer">Для оформления компенсации необходимо обратиться в один из центров госуслуг «Мои документы» не позднее 31 декабря этого года. Для этого потребуется паспорт или другой документ, подтверждающий личность, постановление о назначении административного штрафа, документ, подтверждающий оплату и заявление.
+
+          В случае отсутствия постановления вы можете обратиться за его копией, написав заявление. При наличии нескольких штрафов – вы можете подать одно заявление.</p>
+      </li>
+      <li>
+        <h4 class="faq-question">Что делать, если вещи упали на рельсы?</h4>
+        <p class="faq-answer">Если Ваши вещи упали на рельсы, следует незамедлительно обратиться к дежурной по станции или к сотруднику УВД на метрополитене.
+
+          Ни в коем случае не пытайтесь достать их самостоятельно – вдоль края платформы проходит контактный рельс, на который подано напряжение 825В, приближение к нему, а тем более касание — опасно для жизни.</p>
+      </li>
+      <li>
+        <h4 class="faq-question">Что делать при внезапной остановке эскалатора? </h4>
+        <p class="faq-answer">При внезапной остановке эскалатора следует четко следовать указаниям дежурного у эскалатора. При кратковременной остановке эскалатора — стоять на месте, держась за поручни, при более длительной — подниматься или спускаться по ходу движения.</p>
+      </li>
+      <li>
+        <h4 class="faq-question">Что делать, если в вагоне метро началась драка? </h4>
+        <p class="faq-answer">Если происходит драка в вагоне, следует незамедлительно связаться с машинистом электропоезда по экстренной связи «Пассажир-Машинист» и сообщить ему о случившемся, обязательно указав номер вагона. В этом случае машинист вызовет наряд полиции к ближайшей станции.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+<%}%>
 </body>
 </html>

@@ -30,5 +30,6 @@ public class BuyTicketServlet extends HttpServlet {
         BuyTicket buyTicket = new BuyTicket(user,bus,startCity,endCity);
         BuyTicketDaoImpl buyTicketDao = new BuyTicketDaoImpl();
         buyTicketDao.insert(buyTicket);
+        resp.sendRedirect("/zakaz");
     }
 }

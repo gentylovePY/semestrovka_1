@@ -20,8 +20,10 @@
                  id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/faq.jsp">FAQ</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/index.jsp">Chat</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="">Contact</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/">Chat</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/buyTicket.jsp">BuyTicket</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/zakaz">Orders</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/rasp.jsp">Schedule</a></li>
 
                 </ul>
             </div>
@@ -34,7 +36,7 @@
     <div style="float: top">
         <h2>Chat application</h2>
         <br>
-    <h4 id="username_input" ><%=name%></h4>
+       <h4 id="username_input" > <%=name%></h4>
         <div id="output"></div>
         <input id="message_input" type="text">
         <button onclick="send()">Send message</button>
